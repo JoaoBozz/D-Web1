@@ -37,14 +37,54 @@ div#secao2{
     height: 100vh;
 }
 
+ul.menu{
+    background-color: black;
+}
+
+ul.menu li{
+    width: 179px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    transition: 0.3s;
+    border: 1px solid rgb(255, 255, 255);
+    list-style: none;
+    display: inline-block;
+    text-align: center;
+}
+
+ul.menu a{
+    color: rgb(255, 255, 255);
+}
+
+
+ul.menu li:hover {
+    background-color: antiquewhite;
+    color: rgb(0, 0, 0);
+    border: 1px solid black;;
+}
+
     </style>
 </head>
 <body>
-    <div class="conteiner"></div>
+
+    <ul class="menu">
+        <li>
+            <a href="#cabecalho">Cabecalho</a>
+        </li>
+
+        <li>
+            <a href="#secao1">Seção 1</a>
+        </li>
+        
+        <li>
+            <a href="#secao2">Seção 2</a>
+        </li>
+    </ul>
     
     <div id="cabecalho">
         <h3>
-            Texto
+            Cabeçalho
         </h3>
     </div>
 
