@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 23-05</title>
+
+    <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Jacquard+12&display=swap');
+
+    @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Jacquard+12&display=swap');
+
+    @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Jacquard+12&family=Libre+Barcode+39&family=Nabla&display=swap');
+        
+        body{
+            background-color: var(--cor-primaria);
+        }
+
+        :root{
+            --cor-fundo: #333533;
+            --cor-primaria: #202020;
+            --cor-secundaria: #ffd100;
+            --cor-terciaria: #ffee32;
+            --cor-quartearia: #d6d6d6;
+
+            --fonte-primaria: "Jacquard 12", system-ui;
+            --fonte-secundaria: "Indie Flower";
+            --fonte-terciaria: "Nabla";
+
+            --altura-cabecalho: 100px
+        }
+
+        .card{
+            background-color: var(--cor-fundo);
+            border: 1px solid var(--cor-secundaria);
+            padding: 10px;
+            height: calc(100vh - var(--altura-cabecalho));
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .card ul{
+            margin-bottom: 10px;
+            margin-left: 25px;
+            color: var(--cor-secundaria);
+            font-family: var(--fonte-secundaria);
+        }
+
+        .card h1{
+            margin-left: 10px;
+            color: var(--cor-secundaria);
+            font-family: var(--fonte-terciaria);
+        }
+
+        .cabecalho{
+            background-color: var(--cor-fundo);
+            height: 75px;
+            border: 1px solid var(--cor-secundaria);
+            text-align: center;
+        }
+
+        .cabecalho p{
+            text-align: center;
+            font-family: var(--fonte-terciaria);
+            font-size: 30px
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cabecalho">
+        <p>Cabeçalho</p>
+    </div>
+
+    <div class="card">
+        <h1>
+            Lista de Tarefas
+        </h1>
+        <ul>
+            <li>Tarefa 1</li>
+            <li>Tarefa 2</li>
+            <li>Tarefa 3</li>
+        </ul>
+    </div>
+    
+</body>
+</html>
