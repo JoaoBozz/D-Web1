@@ -25,17 +25,12 @@
             --font-1: "Fjalla One", sans-serif;
             --font-2: "Bebas Neue", sans-serif;
             --font-3: "Permanent Marker";
-
         }
 
         *{
             padding: 0;
             margin: 0;
             box-sizing: 0;
-        }
-
-        i{
-            color: var(--cor-5);
         }
 
         .cabecalho{
@@ -45,7 +40,9 @@
             font-size: 50px;
             font-family: var(--font-2);
             color: var(--cor-1);
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
         }
 
@@ -53,11 +50,26 @@
             background-color: var(--cor-5);
             width: 100vw;
             height: 30px;
-            display: inline-block;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: var(--cor-1);
             font-family: var(--font-1);
-            transition: 0,5s;
+            transition: 0.5s;
+        }
+
+        .menu a{
+            margin: 0 12px;
+            color: var(--cor-1);
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        div#Brawl{
+            background-color: var(--cor-1);
+            height: 500px;
+            margin: 10px;
+            border-radius: 20px;
         }
 
     </style>
@@ -69,12 +81,16 @@
     </div>
 
     <div class="menu">
-        <lu>Brawl Stars</lu>
-        <lu>Clash Royale</lu>
-        <lu>Clash of Clans</lu>
-        <lu>Boom Beach</lu>
-        <lu>Hay Day</lu>
+        <i class="material-icons">menu</i>
+        <a href="#Brawl">Brawl Stars</a>
+        <a href="#Royale">Clash Royale</a>
+        <a href="#Clash">Clash of Clans</a>
+        <a href="#Beach">Boom Beach</a>
+        <a href="#HayDay">Hay Day</a>
     </div>
-    <i class="material-icons">menu</i>
+
+    <div id="Brawl">
+        Brawl Stars
+    </div>
 </body>
 </html>
