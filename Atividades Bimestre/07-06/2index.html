@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supercell</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            overflow: hidden;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            float: left;
+        }
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            background-color: #555;
+        }
+        .content {
+            padding: 20px;
+        }
+        .game-description {
+            display: none;
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Supercell</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="showDescription('clashOfClans')">Clash of Clans</a></li>
+            <li><a href="#" onclick="showDescription('clashRoyale')">Clash Royale</a></li>
+            <li><a href="#" onclick="showDescription('brawlStars')">Brawl Stars</a></li>
+            <li><a href="#" onclick="showDescription('boomBeach')">Boom Beach</a></li>
+            <li><a href="#" onclick="showDescription('hayDay')">Hay Day</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div id="clashOfClans" class="game-description">
+            <h2>Clash of Clans</h2>
+            <p>Construa sua vila, treine suas tropas e lute contra outros jogadores online.</p>
+        </div>
+        <div id="clashRoyale" class="game-description">
+            <h2>Clash Royale</h2>
+            <p>Um jogo de estratégia em tempo real onde você pode coletar e melhorar cartas.</p>
+        </div>
+        <div id="brawlStars" class="game-description">
+            <h2>Brawl Stars</h2>
+            <p>Um jogo de batalha multiplayer rápido com vários modos de jogo.</p>
+        </div>
+        <div id="boomBeach" class="game-description">
+            <h2>Boom Beach</h2>
+            <p>Comande tropas para lutar contra a Guarda Sombria em um arquipélago tropical.</p>
+        </div>
+        <div id="hayDay" class="game-description">
+            <h2>Hay Day</h2>
+            <p>Gerencie sua própria fazenda e venda produtos frescos aos seus amigos e vizinhos.</p>
+        </div>
+    </div>
+
+    <script>
+        function showDescription(gameId) {
+            // Esconde todas as descrições de jogos
+            var descriptions = document.querySelectorAll('.game-description');
+            descriptions.forEach(function(description) {
+                description.style.display = 'none';
+            });
+
+            // Mostra a descrição do jogo selecionado
+            var selectedGame = document.getElementById(gameId);
+            if (selectedGame) {
+                selectedGame.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
