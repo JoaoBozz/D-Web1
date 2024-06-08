@@ -10,9 +10,7 @@
     <style>
 
     @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
-
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&display=swap');
-
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Permanent+Marker&display=swap');
 
         :root{
@@ -27,10 +25,14 @@
             --font-3: "Permanent Marker";
         }
 
+        body{
+            background: linear-gradient( #ffffff, #D6D6D6)
+        }
+
         *{
             padding: 0;
             margin: 0;
-            box-sizing: 0;
+            box-sizing: border-box;
         }
 
         .cabecalho{
@@ -55,21 +57,42 @@
             justify-content: center;
             color: var(--cor-1);
             font-family: var(--font-1);
-            transition: 0.5s;
         }
 
         .menu a{
             margin: 0 12px;
             color: var(--cor-1);
             text-decoration: none;
-            transition: 0.3s;
+            position: relative;
         }
 
-        div#Brawl{
-            background-color: var(--cor-1);
-            height: 500px;
+        .menu a:hover {
+            top: -3px;
+        }
+
+        .imagem-container{
             margin: 10px;
-            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 50vh;
+        }
+
+        .imagem-container a {
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .imagem-container a:hover {
+            transform: scale(1.15);
+        }
+
+        .imagem-container img{
+            border-radius: 15px;
+            width: 450px;
+            height: 280px;
+            object-fit: cover;
+            box-shadow: 0px 6px 8px rgb(0, 0, 0, 0.3);
         }
 
     </style>
@@ -77,7 +100,7 @@
 <body>
     
     <div class="cabecalho">
-        Supercell
+        SUPERCELL
     </div>
 
     <div class="menu">
@@ -85,12 +108,39 @@
         <a href="#Brawl">Brawl Stars</a>
         <a href="#Royale">Clash Royale</a>
         <a href="#Clash">Clash of Clans</a>
-        <a href="#Beach">Boom Beach</a>
+        <a href="#Squad">Squad Busters</a>
         <a href="#HayDay">Hay Day</a>
     </div>
 
-    <div id="Brawl">
-        Brawl Stars
+    <div id="Brawl" class="imagem-container">
+        <a href="https://supercell.com/en/games/brawlstars/">
+            <img src="https://files.tecnoblog.net/wp-content/uploads/2019/03/brawlstars.jpg" alt="Brawl Stars">
+        </a>
     </div>
+
+    <div id="Royale" class="imagem-container">
+        <a href="https://supercell.com/en/games/clashroyale/">
+            <img src="https://s2-techtudo.glbimg.com/JZf57RUeW3xOzixzQaSNTw3rLdk=/0x0:695x390/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2020/H/U/i0quACSJqSNfiQOFvTfQ/clash-royale-duas-contas-tutorial-5.jpg" alt="Clash Royale">
+        </a>
+    </div>
+
+    <div id="Clash" class="imagem-container">
+        <a href="https://supercell.com/en/games/clashofclans/">
+            <img src="https://www.memuplay.com/blog/wp-content/uploads/2020/09/clash_of_clans-main.jpg" alt="Clash of Clans">
+        </a>
+    </div>
+
+    <div id="Squad" class="imagem-container">
+        <a href="https://squadbusters.supercell.com/pt/">
+            <img src="https://tm.ibxk.com.br/2024/06/04/04111918594091.jpg?ims=750x" alt="Squad Busters">
+        </a>
+    </div>
+
+    <div id="HayDay" class="imagem-container">
+        <a href="https://supercell.com/en/games/hayday/">
+            <img src="https://m.media-amazon.com/images/I/91gncdmS6CL.png" alt="Hay Day">
+        </a>
+    </div>
+
 </body>
 </html>
