@@ -8,98 +8,139 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     
     <style>
-
     @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fjalla+One&family=Permanent+Marker&display=swap');
 
-        :root{
-            --cor-1: #D6D6D6;
-            --cor-2: #FFEE32;
-            --cor-3: #FFD100;
-            --cor-4: #202020;
-            --cor-5: #333533;
+    :root{
+        --cor-1: #D6D6D6;
+        --cor-2: #FFEE32;
+        --cor-3: #FFD100;
+        --cor-4: #202020;
+        --cor-5: #333533;
 
-            --font-1: "Fjalla One", sans-serif;
-            --font-2: "Bebas Neue", sans-serif;
-            --font-3: "Permanent Marker";
-        }
+        --font-1: "Fjalla One", sans-serif;
+        --font-2: "Bebas Neue", sans-serif;
+        --font-3: "Permanent Marker";
+    }
 
-        body{
-            background: linear-gradient( #ffffff, #D6D6D6)
-        }
+    body{
+        background-image: url(https://static.vecteezy.com/ti/vetor-gratis/p3/19581648-fundo-branco-3d-vetor.jpg);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
 
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-        }
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
 
-        .cabecalho{
-            background-color: var(--cor-4);
-            height: 70px;
-            width: 100vw;
-            font-size: 50px;
-            font-family: var(--font-2);
-            color: var(--cor-1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
+    .cabecalho{
+        background-color: var(--cor-4);
+        height: 70px;
+        width: 100vw;
+        font-size: 50px;
+        font-family: var(--font-2);
+        color: var(--cor-1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+    }
 
-        .menu{
-            background-color: var(--cor-5);
-            width: 100vw;
-            height: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--cor-1);
-            font-family: var(--font-1);
-        }
+    .menu{
+        background-color: var(--cor-5);
+        width: 100vw;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--cor-1);
+        font-family: var(--font-1);
+    }
 
-        .menu a{
-            margin: 0 12px;
-            color: var(--cor-1);
-            text-decoration: none;
-            position: relative;
-        }
+    .menu a{
+        margin: 0 12px;
+        color: var(--cor-1);
+        text-decoration: none;
+        position: relative;
+    }
 
-        .menu a:hover {
-            top: -3px;
-        }
+    .menu a:hover {
+        top: -3px;
+    }
 
-        .imagem-container{
-            margin: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 50vh;
-        }
+    .imagem-container{
+        margin: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+    }
 
-        .imagem-container a {
-            display: inline-block;
-            transition: transform 0.3s;
-        }
+    .imagem-container a {
+        display: flex;
+        transition: transform 0.3s;
+    }
 
-        .imagem-container a:hover {
-            transform: scale(1.15);
-        }
+    .imagem-container a:hover {
+        transform: scale(1.15);
+    }
 
-        .imagem-container img{
-            border-radius: 15px;
-            width: 500px;
-            height: 300px;
-            object-fit: cover;                
-            box-shadow: 0px 6px 8px rgb(0, 0, 0, 0.3);
-        }
+    .imagem-container img{
+        border-radius: 15px;
+        width: 500px;
+        height: 300px;
+        object-fit: cover;                
+        box-shadow: 0px 6px 8px rgb(0, 0, 0, 0.3);
+    }
+
+    .botao{
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: var(--cor-5);
+        border-radius: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+
+    .botao:hover{
+        background-color: var(--cor-4);
+    }
+
+    .botao i{
+        color: var(--cor-2);
+        font-size: 24px;
+    }
+
+    .rodape{
+        height: 100px;
+        width: 100vw;
+        background-color: #202020;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        color: var(--cor-1);
+        font-family: var(--font-1);
+        font-size: 20px;
+    }
+
 
     </style>
 </head>
 <body>
     
-    <div class="cabecalho">
+    <div id="inicio" class="cabecalho">
         SUPERCELL
     </div>
 
@@ -140,6 +181,16 @@
         <a href="https://supercell.com/en/games/hayday/">
             <img src="https://m.media-amazon.com/images/I/91gncdmS6CL.png" alt="Hay Day">
         </a>
+    </div>
+
+    <a href="#inicio" class="botao">
+        <i class="material-icons">arrow_upward</i>
+    </a>
+
+    <div class="rodape">
+        <p>Entre em contato conosco:</p>
+        <p>Email: suporte@supercell.com</p>
+        <p>Telefone: +55 44 1234-5678</p>
     </div>
 
 </body>
