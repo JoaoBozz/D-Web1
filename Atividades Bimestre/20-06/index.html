@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .verdeazul{
+            display: flex;
+            flex-flow: row;
+
+        }
+
+        .box1{
+            height: 13vh;
+            width: 100vw;
+            background-color: yellow;
+        }
+
+        .box2{
+            height: 74vh;
+            width: 20vw;
+            background-color: blue;
+            align-self: start;
+        }
+
+        .box3{
+            height: 74vh;
+            width: 80vw;
+            background-color: green;
+            align-self: end;
+        }
+
+        .box4{
+            height: 13vh;
+            width: 100vw;
+            background-color: red;
+        }
+
+        .texto{
+            text-align: center;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="texto">
+        <header class="box1">topo</header>
+        <div class="verdeazul">
+            <aside class="box2">slidebar</aside>
+            <main class="box3">conteúdo</main>
+        </div>
+        <footer class="box4">rodapé</footer>
+    </div>
+</body>
+</html>
