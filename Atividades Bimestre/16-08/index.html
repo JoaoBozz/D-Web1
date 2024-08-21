@@ -12,6 +12,15 @@
             box-sizing: border-box;
         }
 
+        :root{
+            --cor-1: white;
+            --cor-2: rgb(94, 94, 97);
+            --cor-3: rgb(128, 123, 123);
+            --cor-4: black;
+            --cor-5: rgb(173, 170, 170);
+            --cor-6: rgb(43, 42, 42);
+        }
+
         .corpo{
             display: flex;
             justify-content: center;
@@ -19,7 +28,7 @@
         }
 
         .esquerda{
-            background-color: rgb(255, 255, 255);
+            background-color: var(--cor-1);
             height: 100vh;
             width: 45vw;
             display: flex;
@@ -44,7 +53,7 @@
         p{
             font-size: 20px;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            color: rgb(135, 135, 141);
+            color: var(--cor-2);
         }
 
         .caixas{
@@ -62,39 +71,71 @@
             height: 4vh;
             width: 40vw;
             text-align: center;
-            color: rgb(128, 123, 123);
+            color: var(--cor-3);
         }
 
         .contas{
-            border: 3px solid black;
-            border-radius: 10px;
             height: 23vh;
             width: 40vw;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            align-items: center;
         }
 
         .textinho{
-            border: 3px solid black;
-            border-radius: 10px;
             height: 9vh;
-            width: 40vw;
+            width: 29vw;
+            text-align: center;
+            margin-top: 10px;
         }
 
-        img {
+        .imagem {
+            position: relative;
             width: 54vw;
             height: 97vh;
+        }
+
+        .imagem img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
             border-radius: 40px;
         }
 
+        .texto_na_imagem {
+            position: absolute;
+            top: 80%;
+            left: 10%;
+            right: 20%;
+            color: var(--cor-1);
+            text-shadow: 2px 2px 5px var(--cor-4);
+            font-size: 30px;
+            text-align: justify;
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+
         button img{
-            width: 1vw;
-            height: 1vh;
+            width: 1.2vw;
+            height: 2.5vh;
+        }
+
+        button{
+            height: 50px;
+            width: 30vw;
+            background-color: var(--cor-1);
+            border: var(--cor-5) 1px solid;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
         }
 
         input[type='text'], input[type='email']{
             height: 50px;
             width: 30vw;
-            border: rgb(201, 176, 176) solid 1px;
+            border: var(--cor-5) solid 1px;
             font-size: 16px;
             text-indent: 15px;
         }
@@ -102,8 +143,8 @@
         input[type='submit']{
             height: 50px;
             width: 30vw;
-            background-color: rgb(43, 42, 42);
-            color: white;
+            background-color: var(--cor-6);
+            color: var(--cor-1);
             font-size: 16px;
         }
 
@@ -156,10 +197,18 @@
                     </button>
                 </div>
                 <div class="textinho">
-
+                    <p>
+                        By signing in or creating an account, you agree with our <u><strong>Terms & Conditions</strong></u> and <u><strong>Privacy Statemant</strong></u>
+                    </p>
                 </div>
             </div>
+
+            <div class="imagem">
                 <img src="https://www.pensamentoverde.com.br/wp-content/uploads/2018/02/Depositphotos_16902961_original_a393978551.jpg" alt="">
+                <div class="texto_na_imagem">
+                    "Bom dia! Acredite no poder da positividade e nas infinitas possibilidades que o dia oferece. A vida é um presente, e cada novo dia é uma bênção. Aproveite ao máximo."
+                </div>
+            </div>
         </div>
     </div>
 </body>
