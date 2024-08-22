@@ -1,9 +1,17 @@
-        //ENTRADA
-        let peso = 80
-        let altura = 1.8
+        function calcularIMC(){
+                
+                //captura elementos HTML que serãp manipulados pelo javascript
+                let inputPeso = document.getElementById("peso")
+                let inputAltura = document.getElementById("altura")
+                let divSaida = document.getElementById("saida")
 
-        //PROCESSAMENTO
-        let imc = peso / (altura * altura)
+                //ENTRADA
+                let peso = Number(inputPeso.value)
+                let altura = Number(inputAltura.value)
 
-        //SAÍDA
-        console.log("IMC: ", imc)
+                //PROCESSAMENTO
+                let imc = peso / (altura * altura)
+
+                //SAÍDA
+                divSaida.innerText = imc
+        }
