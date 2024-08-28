@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juros Composto</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+
+    <div class="botoes">
+
+        <h1>
+            JUROS COMPOSTOS
+        </h1>
+
+        <label for="capital">Capital</label>
+        <input id="capital" type="text">
+
+        <label for="taxa_de_juros">Taxa de Juros (%)</label>
+        <input id="taxa_de_juros" type="text">
+
+        <label for="numero_periodos">Numero de períodos</label>
+        <input id="numero_periodos" type="text">
+
+        <button id="Calcular" onclick="calcularJC()">
+            calcular
+        </button>
+
+        <div id="saida">
+            Montante:
+        </div>
+
+        <div id="saida2">
+            Ganho:
+        </div>
+    </div>
+</body>
+</html>
