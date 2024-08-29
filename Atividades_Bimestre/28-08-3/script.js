@@ -10,5 +10,5 @@ function calcularCUSTO(){
 
     let custo = distancia / autonomia * 4.08 + pedagio
 
-    divSaida.innerText = 'Custo total: ' + custo
+    divSaida.innerText = 'Custo total: ' + custo.toFixed(2)
 }
