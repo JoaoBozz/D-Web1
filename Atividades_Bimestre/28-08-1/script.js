@@ -12,6 +12,6 @@ function calcularJC(){
     let montante = capital * ((1 + (taxa_de_juros/100)) ** numero_periodos)
     let ganho = montante - capital
 
-    divSaida.innerText = `Montante: ${montante.toFixed()}`;
-    divSaida2.innerText = `Ganho: ${ganho.toFixed()}`;
+    divSaida.innerText = 'Montante: ' + montante
+    divSaida2.innerText = 'Ganho: ' + ganho
 }

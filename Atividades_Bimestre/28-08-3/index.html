@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custo da Viagem</title>
+    <link rel="stylesheet" href="desing.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    <div class="conteiner">
+
+        <h1>
+            Custo da viagem
+        </h1>
+
+        <label for="distancia">Distância</label>
+        <input id="distancia" type="text">
+
+        <label for="autonomia">Autonomia do veículo (xKm/L) (etanol)</label>
+        <input id="autonomia" type="text">
+
+        <label for="pedagio">Valor total dos pedágios</label>
+        <input id="pedagio" type="text">
+
+        <button id="Calcular" onclick="calcularCUSTO()">
+            Calcular
+        </button>
+
+        <div id="saida">
+            Custo total:
+        </div>
+    </div>
+</body>
+</html>

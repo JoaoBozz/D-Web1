@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.conteiner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 17px;
+}
+
+h1{
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 200px;
+}
+
+input{
+    height: 50px;
+    width: 500px;
+    font-size: 20px;
+    text-indent: 20px;
+}
+
+label{
+    font-size: 25px;
+}
+
+
+#Calcular{
+    height: 30px;
+    width: 100px;
+    margin-top: 20px;
+}
+
+#saida{
+    font-size: 30px;
+    margin-top: 20px;
+}
