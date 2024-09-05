@@ -13,13 +13,13 @@ function calcularMULTA() {
     }
 
     else if (velocidade_veic <= 0.2 * velocidade_max + velocidade_max) {
-        divSaida.innerText = 'Você excedeu a ' + porcentage_de_excesso + '% a velocidade máxima. Sua multa é de R$130,16'
+        divSaida.innerText = 'Você excedeu a ' + porcentage_de_excesso.toFixed(2) + '%  a velocidade máxima. Sua multa é de R$130,16'
     }
     else if (velocidade_veic > 0.2 * velocidade_max + velocidade_max && velocidade_veic <= 0.5 * velocidade_max + velocidade_max) {
-        divSaida.innerText = 'Você excedeu a ' + porcentage_de_excesso + '% a velocidade máxima. Sua multa é de R$196,23'
+        divSaida.innerText = 'Você excedeu a ' + porcentage_de_excesso.toFixed(2) + '% a velocidade máxima. Sua multa é de R$196,23'
     }
 
     else {
-        divSaida.innerText = 'Você excedeu ' + porcentage_de_excesso + '% a velocidade máxima. Sua multa é de R$880,41'
+        divSaida.innerText = 'Você excedeu ' + porcentage_de_excesso.toFixed(2) + '% a velocidade máxima. Sua multa é de R$880,41'
     }
 }
