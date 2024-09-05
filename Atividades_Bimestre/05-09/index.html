@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de multas</title>
+    <link rel="stylesheet" href="tema.css">
+    <script src="script.js" defer></script>
+
+</head>
+<body>
+    
+    <div class="conteiner">
+        
+        <div class="dados">
+            <h1>
+                Sistema de Multas
+            </h1>
+
+            <label for="velocidade_max"></label>
+            <input id="velocidade_max" type="number" placeholder=" Velocidade Máxima da via">
+
+            <label for="velocidade_veic"></label>
+            <input id="velocidade_veic" type="number" placeholder="Velocidade do veículo">
+
+            <button id="calcular" onclick="calcularMULTA()">
+                calcular
+            </button>
+
+            <div id="saida" >
+                Multa:
+            </div>
+        </div>
+
+        <div class="multa">
+            <p>
+                Multa por excesso de velocidade:
+            </p>
+
+            <p>
+                <strong>R$130,16</strong> - Até 20% acima do limite permitido
+            </p>
+
+            <p>
+                <strong>R$196,23</strong> - De 20% até 50% acima do limite permitido
+            </p>
+
+            <p>
+                <strong>R$880,41</strong> - Acima de 50% acima do limite permitido
+            </p>
+        </div>
+
+    </div>
+</body>
+</html>
