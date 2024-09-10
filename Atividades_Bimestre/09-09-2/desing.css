@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&family=Nerko+One&display=swap');
+
+:root{
+    --cor-1: #dad7cd;
+    --cor-2: #a3b18a;
+    --cor-3: #588157;
+    --cor-4: #3a5a40;
+    --cor-5: #344e41;
+
+    --font-1: "Nerko One", cursive;
+    --font-2: "Mukta", sans-serif;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--cor-1);
+    margin: 0;
+    font-family: var(--font-2);
+}
+
+.conteiner{
+    background-color: white;
+    width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+}
+
+h1{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h2{
+    font-size: 24px;
+}
+
+.btn{
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: var(--cor-3);
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: var(--cor-4);
+}
+
+.grade_btn{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin-top: 20px;
+}
