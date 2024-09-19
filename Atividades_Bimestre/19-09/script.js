@@ -23,4 +23,4 @@ function tabuadas(y) {
     }
 }
 
-tabuadas(5)
+tabuadas(7)
