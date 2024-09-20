@@ -1,4 +1,5 @@
 function MEDICAMENTO(peso, idade){
+    
     let mg
 
     if(idade >= 12){
