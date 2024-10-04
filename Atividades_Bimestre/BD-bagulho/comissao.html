@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo de Comissão</title>
+    <link rel="stylesheet" href="comissao.css">
+</head>
+<body>
+    <div class="background">
+        <div class="form-container">
+            <h2>Cálculo de Comissão dos Funcionários</h2>
+
+            <div class="search-group">
+                <input type="text" id="buscar-funcionario" placeholder="Buscar Funcionário">
+                <input type="month" id="buscar-mes" placeholder="Mês">
+            </div>
+
+            <div class="comission-table">
+                <div class="comission-header">
+                    <span>ID Funcionário</span>
+                    <span>Salário Fixo</span>
+                    <span>Total de Vendas</span>
+                    <span>Porcentagem de Comissão</span>
+                    <span>Comissão no Mês</span>
+                </div>
+
+                <!-- Exemplo de cálculo para funcionários -->
+                <div class="comission-row">
+                    <span>Func001</span>
+                    <span>R$ 3.000,00</span>
+                    <span>R$ 10.000,00</span>
+                    <span>10%</span>
+                    <span>R$ 1.000,00</span>
+                </div>
+
+                <div class="comission-row">
+                    <span>Func002</span>
+                    <span>R$ 2.500,00</span>
+                    <span>R$ 8.000,00</span>
+                    <span>12%</span>
+                    <span>R$ 960,00</span>
+                </div>
+
+                <div class="comission-row">
+                    <span>Func003</span>
+                    <span>R$ 3.500,00</span>
+                    <span>R$ 12.000,00</span>
+                    <span>8%</span>
+                    <span>R$ 960,00</span>
+                </div>
+
+                <!-- Adicionar mais linhas conforme necessário -->
+            </div>
+
+            <div class="form-actions">
+                <button class="action-btn">Calcular Comissão</button>
+                <button class="cancel-btn">Cancelar</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

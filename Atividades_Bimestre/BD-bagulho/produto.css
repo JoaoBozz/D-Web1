@@ -1,0 +1,219 @@
+body {
+    font-family: 'Roboto', sans-serif; /* Fonte não cursiva */
+    background-color: rgba(173, 255, 192, 0.8); /* Fundo verde claro */
+    margin: 0;
+    padding: 20px;
+    position: relative; /* Para as formas geométricas no fundo */
+}
+
+.main-container {
+    background-color: white;
+    border-radius: 10px;
+    padding: 40px;
+    width: 800px; /* Largura do container */
+    margin: auto; /* Centraliza na página */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Para as formas geométricas */
+    overflow: hidden; /* Para não ultrapassar os limites do container */
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-family: 'Satisfy', cursive; /* Fonte cursiva do logotipo */
+    color: #66bb6a; /* Cor verde do logotipo Vinsel */
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px; /* Largura do campo de busca */
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #ff7043; /* Laranja */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.product-list {
+    margin-bottom: 30px;
+}
+
+.product-item {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.product-image {
+    width: 100px; /* Largura da imagem do produto */
+    height: 100px; /* Altura da imagem do produto */
+    border-radius: 5px; /* Bordas arredondadas para a imagem */
+    margin-right: 15px; /* Espaçamento entre a imagem e o texto */
+}
+
+.product-details {
+    flex: 1; /* Para ocupar o espaço restante */
+}
+
+.product-name {
+    font-weight: bold; /* Nome do produto em negrito */
+}
+
+.product-description {
+    color: #555; /* Cor da descrição */
+}
+
+.edit-button, .remove-button {
+    padding: 5px 10px;
+    background-color: #ffb74d; /* Laranja mais claro */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.add-product-container {
+    margin-top: 20px;
+    display: flex; /* Alinha os campos e o botão na horizontal */
+    flex-direction: column; /* Alinha verticalmente */
+    align-items: center; /* Centraliza os itens */
+}
+
+.add-button {
+    padding: 10px 20px;
+    background-color: #66bb6a; /* Verde */
+    border: none;
+    border-radius: 5px;
+}
+
+/* Estilo para as formas geométricas de fundo */
+.main-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        url('https://via.placeholder.com/50x50/66bb6a/ffffff?text=') repeat, 
+        url('https://via.placeholder.com/70x70/ffb74d/ffffff?text=') repeat, 
+        url('https://via.placeholder.com/100x100/ff7043/ffffff?text=') repeat;
+    background-size: 100px 100px; /* Tamanho das formas */
+    opacity: 0.1; /* Semi-transparente */
+    z-index: 0; /* Coloca as formas atrás do conteúdo */
+}
+
+.product-item {
+    position: relative; /* Para que os botões apareçam sobre as formas */
+    z-index: 1; /* Coloca os itens à frente das formas */
+}
+
+/* Formas geométricas - quadrados */
+.shape.square {
+    position: absolute;
+    animation: float 25s infinite ease-in-out;
+}
+
+.shape.square-1 {
+    width: 120px;
+    height: 120px;
+    background: rgba(0, 255, 127, 0.2); /* Verde primavera */
+    top: 30%;
+    left: 70%;
+}
+
+.shape.square-2 {
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 100, 0, 0.3); /* Verde escuro */
+    top: 80%;
+    left: 25%;
+}
+
+.shape.square-3 {
+    width: 90px;
+    height: 90px;
+    background: rgba(46, 139, 87, 0.2); /* Verde marinho */
+    top: 60%;
+    left: 10%;
+}
+
+.shape.square-4 {
+    width: 70px;
+    height: 70px;
+    background: rgba(34, 139, 34, 0.2); /* Verde floresta */
+    top: 20%;
+    left: 10%;
+}
+
+.shape.square-5 {
+    width: 100px;
+    height: 100px;
+    background: rgba(50, 205, 50, 0.3); /* Verde limão */
+    top: 40%;
+    left: 50%;
+}
+
+.shape.square-6 {
+    width: 85px;
+    height: 85px;
+    background: rgba(60, 179, 113, 0.2); /* Verde médio */
+    top: 10%;
+    left: 40%;
+}
+
+.shape.square-7 {
+    width: 110px;
+    height: 110px;
+    background: rgba(0, 255, 127, 0.2); /* Verde primavera */
+    top: 70%;
+    left: 15%;
+}
+
+/* Formas geométricas - triângulos */
+.shape.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    animation: float 18s infinite ease-in-out;
+}
+
+.shape.triangle-1 {
+    border-bottom: 80px solid rgba(34, 139, 34, 0.2); /* Verde floresta */
+    top: 20%;
+    left: 80%;
+    transform: rotate(20deg);
+}
+
+.shape.triangle-2 {
+    border-bottom: 70px solid rgba(0, 128, 0, 0.3); /* Verde escuro */
+    top: 65%;
+    left: 45%;
+    transform: rotate(-30deg);
+}
+
+.shape.triangle-3 {
+    border-bottom: 90px solid rgba(144, 238, 144, 0.3); /* Verde claro */
+    top: 40%;
+    left: 10%;
+    
+}

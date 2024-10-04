@@ -1,0 +1,393 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fundo com formas geométricas */
+.background-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(144, 238, 144, 0.7); /* Verde claro semi-transparente */
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Formas geométricas - círculos */
+.shape.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2); /* Círculos semi-transparente */
+    animation: float 20s infinite ease-in-out;
+}
+
+.shape.circle-1 {
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: 20%;
+}
+
+.shape.circle-2 {
+    width: 80px;
+    height: 80px;
+    top: 50%;
+    left: 60%;
+}
+
+.shape.circle-3 {
+    width: 150px;
+    height: 150px;
+    top: 75%;
+    left: 15%;
+}
+.shape.circle-8 {
+    width: 150px;
+    height: 150px;
+    top: 75%;
+    left: 15%;
+}
+.shape.circle-9 {
+    width: 150px;
+    height: 150px;
+    top: 75%;
+    left: 15%;
+}
+.shape.circle-10 {
+    width: 150px;
+    height: 150px;
+    top: 75%;
+    left: 15%;
+}
+
+/* Formas geométricas - quadrados */
+.shape.square {
+    position: absolute;
+    background: rgba(255, 165, 0, 0.2); /* Quadrados laranja transparente */
+    animation: float 25s infinite ease-in-out;
+}
+
+.shape.square-1 {
+    width: 120px;
+    height: 120px;
+    top: 30%;
+    left: 70%;
+}
+
+.shape.square-2 {
+    width: 60px;
+    height: 60px;
+    top: 80%;
+    left: 25%;
+}
+
+.shape.square-3 {
+    width: 90px;
+    height: 90px;
+    top: 60%;
+    left: 10%;
+}
+
+/* Formas geométricas - triângulos */
+.shape.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 80px solid rgba(255, 255, 255, 0.2); /* Triângulos brancos transparentes */
+    animation: float 18s infinite ease-in-out;
+}
+
+.shape.triangle-1 {
+    top: 20%;
+    left: 80%;
+    transform: rotate(20deg);
+}
+
+.shape.triangle-2 {
+    top: 65%;
+    left: 45%;
+    transform: rotate(-30deg);
+}
+
+.shape.triangle-3 {
+    top: 40%;
+    left: 10%;
+    transform: rotate(15deg);
+}
+
+/* Animação flutuante */
+@keyframes float {
+    0% {
+        transform: translateY(50px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-20px) rotate(180deg);
+    }
+    100% {
+        transform: translateY(30px) rotate(360deg);
+    }
+}
+
+/* Container principal */
+.login-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 350px;
+    text-align: center;
+    z-index: 1;
+}
+
+/* Estilo do logotipo */
+.logo h1 {
+    font-family: 'Satisfy', cursive;
+    color: #1F8D53; /* Verde escuro */
+    margin-bottom: 20px;
+    font-size: 36px;
+}
+
+/* Formulário de login */
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-field {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-btn {
+    background-color: #1F8D53; /* Verde escuro */
+    color: white;
+}
+
+.signup-btn {
+    background-color: #F37021; /* Laranja */
+    color: white;
+}
+
+.links a {
+    display: block;
+    color: #1F8D53; /* Verde escuro */
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fundo com formas geométricas */
+.background-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(144, 238, 144, 0.7); /* Verde claro semi-transparente */
+    z-index: -1;
+    overflow: hidden;
+}
+
+/* Formas geométricas - círculos */
+.shape.circle {
+    position: absolute;
+    border-radius: 50%;
+    animation: float 20s infinite ease-in-out;
+}
+
+.shape.circle-1 {
+    width: 100px;
+    height: 100px;
+    background: rgba(50, 205, 50, 0.2); /* Verde limão semi-transparente */
+    top: 10%;
+    left: 20%;
+}
+
+.shape.circle-2 {
+    width: 80px;
+    height: 80px;
+    background: rgba(34, 139, 34, 0.2); /* Verde floresta */
+    top: 50%;
+    left: 60%;
+}
+
+.shape.circle-3 {
+    width: 150px;
+    height: 150px;
+    background: rgba(144, 238, 144, 0.2); /* Verde claro */
+    top: 75%;
+    left: 15%;
+}
+
+.shape.circle-4 {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 128, 0, 0.3); /* Verde escuro */
+    top: 30%;
+    left: 80%;
+}
+
+.shape.circle-5 {
+    width: 120px;
+    height: 120px;
+    background: rgba(107, 142, 35, 0.3); /* Verde oliva */
+    top: 85%;
+    left: 40%;
+}
+
+.shape.circle-6 {
+    width: 70px;
+    height: 70px;
+    background: rgba(60, 179, 113, 0.3); /* Verde médio */
+    top: 20%;
+    left: 70%;
+}
+
+.shape.circle-7 {
+    width: 90px;
+    height: 90px;
+    background: rgba(173, 255, 47, 0.2); /* Verde amarelo */
+    top: 65%;
+    left: 25%;
+}
+
+/* Formas geométricas - quadrados */
+.shape.square {
+    position: absolute;
+    animation: float 25s infinite ease-in-out;
+}
+
+.shape.square-1 {
+    width: 120px;
+    height: 120px;
+    background: rgba(0, 255, 127, 0.2); /* Verde primavera */
+    top: 30%;
+    left: 70%;
+}
+
+.shape.square-2 {
+    width: 60px;
+    height: 60px;
+    background: rgba(0, 100, 0, 0.3); /* Verde escuro */
+    top: 80%;
+    left: 25%;
+}
+
+.shape.square-3 {
+    width: 90px;
+    height: 90px;
+    background: rgba(46, 139, 87, 0.2); /* Verde marinho */
+    top: 60%;
+    left: 10%;
+}
+
+.shape.square-4 {
+    width: 70px;
+    height: 70px;
+    background: rgba(34, 139, 34, 0.2); /* Verde floresta */
+    top: 20%;
+    left: 10%;
+}
+
+.shape.square-5 {
+    width: 100px;
+    height: 100px;
+    background: rgba(50, 205, 50, 0.3); /* Verde limão */
+    top: 40%;
+    left: 50%;
+}
+
+.shape.square-6 {
+    width: 85px;
+    height: 85px;
+    background: rgba(60, 179, 113, 0.2); /* Verde médio */
+    top: 10%;
+    left: 40%;
+}
+
+.shape.square-7 {
+    width: 110px;
+    height: 110px;
+    background: rgba(0, 255, 127, 0.2); /* Verde primavera */
+    top: 70%;
+    left: 15%;
+}
+
+/* Formas geométricas - triângulos */
+.shape.triangle {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    animation: float 18s infinite ease-in-out;
+}
+
+.shape.triangle-1 {
+    border-bottom: 80px solid rgba(34, 139, 34, 0.2); /* Verde floresta */
+    top: 20%;
+    left: 80%;
+    transform: rotate(20deg);
+}
+
+.shape.triangle-2 {
+    border-bottom: 70px solid rgba(0, 128, 0, 0.3); /* Verde escuro */
+    top: 65%;
+    left: 45%;
+    transform: rotate(-30deg);
+}
+
+.shape.triangle-3 {
+    border-bottom: 90px solid rgba(144, 238, 144, 0.3); /* Verde claro */
+    top: 40%;
+    left: 10%;
+    
+}

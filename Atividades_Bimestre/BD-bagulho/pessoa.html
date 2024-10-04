@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Cadastro - Vinsel</title>
+    
+    <!-- Fonte Satisfy -->
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="./pessoa.css">
+    
+    <!-- Script para mostrar campos com base na seleção -->
+    <script>
+        function toggleFields() {
+            const role = document.getElementById("role").value;
+            const employeeFields = document.getElementById("employee-fields");
+            if (role === "funcionario") {
+                employeeFields.style.display = "block";
+            } else {
+                employeeFields.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Fundo com formas geométricas rotatórias -->
+    <div class="background-pattern">
+        <div class="shape circle circle-1"></div>
+        <div class="shape circle circle-2"></div>
+        <div class="shape circle circle-3"></div>
+        <div class="shape square square-1"></div>
+        <div class="shape square square-2"></div>
+        <div class="shape triangle triangle-1"></div>
+        <div class="shape triangle triangle-2"></div>
+        <div class="shape circle circle-1"></div>
+        <div class="shape circle circle-2"></div>
+        <div class="shape circle circle-3"></div>
+        <div class="shape square square-3"></div>
+        <div class="shape square square-4"></div>
+        <div class="shape triangle triangle-3"></div>
+        <div class="shape triangle triangle-4"></div>
+    </div>
+
+    <!-- Container de cadastro mais largo -->
+    <div class="register-container">
+        <div class="logo">
+            <h1>Vinsel Cadastro</h1>
+        </div>
+        <form class="register-form">
+            <input class="input-field" type="text" placeholder="Nome" required>
+            <input class="input-field" type="text" placeholder="CPF" required>
+            <input class="input-field" type="text" placeholder="CEP" required>
+            <input class="input-field" type="text" placeholder="Rua" required>
+            <input class="input-field" type="text" placeholder="Número" required>
+            <input class="input-field" type="text" placeholder="Cidade" required>
+            <input class="input-field" type="text" placeholder="Estado" required>
+            <input class="input-field" type="email" placeholder="Email" required>
+            
+            <label for="role">Função:</label>
+            <select id="role" name="role" onchange="toggleFields()">
+                <option value="cliente">Cliente</option>
+                <option value="funcionario">Funcionário</option>
+            </select>
+
+            <!-- Campos exclusivos para funcionários -->
+            <div id="employee-fields" style="display: none;">
+                <input class="input-field" type="text" placeholder="Comissão (%)">
+                <input class="input-field" type="text" placeholder="Salário (R$)">
+            </div>
+            
+            <button type="submit" class="submit-button">Cadastrar</button>
+        </form>
+    </div>
+
+</body>
+</html>
