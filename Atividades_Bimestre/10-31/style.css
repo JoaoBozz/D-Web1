@@ -49,25 +49,29 @@ nav a:hover{
     color: #dcdcdc;
 }
 
-#sidebar{
-    height: 100vh;
-    width: 285px;
+
+#sidebar {
     position: fixed;
     top: 0;
-    right: 0;
-    background-color: #ffffff38;
+    right:-100%;
+    height: 100vh;  
+    width: 280px;
+    background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
 
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
 
+    transition: all 1s;
+
     z-index: 999;
 }
 
+
 .icon{
-    fill: #ffffff;
+    fill: #fff;
 }
 
 .logotipo{
@@ -89,15 +93,20 @@ nav a:hover{
     max-width: 400px;
 }
 
-@media (max-width: 800px){
-    .hideMobile{
+@media (max-width: 639px) {
+    .hideMobile {
+        display: none;
+    }
+
+    .logotipo{
+        font-weight: bold;
+        font-size: 1rem;
+    }
+    
+}
+@media (min-width: 640px) {
+    .hideDesktop {
         display: none;
     }
 }
 
-@media (min-width: 800px){
-    .hidePC{
-        display: none;
-    }
-
-}
