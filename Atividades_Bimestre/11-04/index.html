@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="estilizacao.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <div class="logo">Logo</div>
+        <div class="botoes">
+            <ul>
+                <li class="hideMobile"><a href="#">Home</a></li>
+                <li class="hideMobile"><a href="#">Sobre</a></li>
+                <li class="hideMobile"><a href="#">Contato</a></li>
+                <li id="menuicon" class="hideDesktop">
+                    <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="4" width="24" height="2" fill="white"/>
+                        <rect y="11" width="24" height="2" fill="white"/>
+                        <rect y="18" width="24" height="2" fill="white"/>
+                    </svg>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <ul id="sidebar" class="hideDesktop">
+        <a id="closeicon" href="#">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 512 512" fill="rgb(255,255,255)">
+                <path d="M437.5 386.6L306.9 256l130.6-130.6c14.1-14.1 14.1-36.8 0-50.9-14.1-14.1-36.8-14.1-50.9 0L256 205.1 125.4 74.5c-14.1-14.1-36.8-14.1-50.9 0-14.1 14.1-14.1 36.8 0 50.9L205.1 256 74.5 386.6c-14.1 14.1-14.1 36.8 0 50.9 14.1 14.1 36.8 14.1 50.9 0L256 306.9l130.6 130.6c14.1 14.1 36.8 14.1 50.9 0 14-14.1 14-36.9 0-50.9z"></path>
+            </svg>
+        </a>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Contato</a></li>
+    </ul>
+
+    <div class="conteudo">
+        <h1>Navbar responsiva</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus amet unde, tempora maxime rem libero, repellendus itaque dolore quod doloremque earum asperiores praesentium atque id minus. Error veniam inventore exercitationem?</p>
+    </div>
+</body>
+</html>
