@@ -57,10 +57,13 @@ a {
     transition: right 0.3s ease;
     list-style: none;
     z-index: 999;
+    font-size: 40px;
+    gap: 30px;
 }
 
 #closeicon{
     top: 0;
+    display: flex;
 }
 
 @media (max-width: 767px) {
@@ -73,3 +76,5 @@ a {
         display: none;
     }
 }
+
+/* Não consegui por o x em cima do hamburger */
