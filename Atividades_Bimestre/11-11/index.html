@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de Alunos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Consulta de Alunos</h1>
+  <div class="form-container">
+    <input type="text" id="nomeInput" placeholder="Digite o nome do aluno">
+    <button onclick="buscarAluno()">Buscar</button>
+  </div>
+  <div id="resultado" class="resultado"></div>
+
+  <!-- Firebase App e Firestore (estoque) SDK (traz o firebase, e suas ferramentas para dentro do html) -->
+   <!-- essas urls vão carregar todas as bibliotecas e scripts do firebase para que possamos usa-las -->
+    <!-- são os entregadores, trazem os produtos(dados) -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-firestore-compat.js"></script>
+
+  <!-- Configuração do Firebase e Script Principal -->
+  <script>
+    // Configuração do Firebase, a chave para abrir o deposito, permite a autenticação do banco de dados, deixa a gente ter acesso aos dados
+    const firebaseConfig = {
+      apiKey: "AIzaSyBuH6iOovYnn2wlG_Vnf40MzeKbtECxgPM",
+      authDomain: "trabalhobd-fe346.firebaseapp.com",
+      projectId: "trabalhobd-fe346",
+      storageBucket: "trabalhobd-fe346.appspot.com",
+      messagingSenderId: "24729836966",
+      appId: "1:24729836966:web:ed9f318fd6422846bd8367"
+    };
+    // Inicializa a api
+    firebase.initializeApp(firebaseConfig);
+    
+    // Inicializa o Firestore
+    // é quem vai abrir os pacotes
+    const db = firebase.firestore();
+
+    // Função para buscar aluno pelo nome
+    async function buscarAluno() {
+      const nome = document.getElementById("nomeInput").value;
+      const resultadoDiv = document.getElementById("resultado");
+
+      if (!nome) {
+        resultadoDiv.innerHTML = "Por favor, digite um nome para buscar.";
+        return;
+      }
+
+      // Consulta ao Firestore, busca o produto que a pessoa pediu
+      const alunosRef = db.collection("alunos");
+      const querySnapshot = await alunosRef.where("nome", "==", nome).get();
+
+      if (querySnapshot.empty) {
+        resultadoDiv.innerHTML = "Nenhum aluno encontrado com esse nome.";
+      } else {
+        resultadoDiv.innerHTML = ""; // Limpa o conteúdo anterior
+        querySnapshot.forEach((doc) => {
+          const dados = doc.data();
+          resultadoDiv.innerHTML += `
+            <p><strong>Nome:</strong> ${dados.nome}</p>
+            <p><strong>Média:</strong> ${dados.média}</p>
+            <p><strong>Idade:</strong> ${dados.idade} anos</p>
+            <p><strong>Altura:</strong> ${dados.altura} M</p>
+            <hr>
+          `;
+        });
+      }
+    }
+  </script>
+</body>
+</html>
