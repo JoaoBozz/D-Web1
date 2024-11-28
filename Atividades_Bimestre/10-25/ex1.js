@@ -1,7 +1,7 @@
 function isPalindrome(str){
     let reverso = ""
     let n = str.length
-    for (n--; n >= 0; n--){
+    for (let i; n >= 0; n--){
         reverso += str[n]
     }
     return reverso

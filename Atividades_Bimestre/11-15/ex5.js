@@ -7,3 +7,5 @@ const produto = {
 for (let i in produto){
     console.log(`${i}: ${produto[i]}`)
 }
+
+console.log(produto)
