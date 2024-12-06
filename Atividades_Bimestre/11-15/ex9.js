@@ -12,7 +12,7 @@ function atualizarQuantidade(id_at, quant_at){
             return estoque[i]
         }
     }
-    return "Produto não encontrado."
+    return "Produto não encontradoo."
 }
 
 console.log(atualizarQuantidade(2, 20))
