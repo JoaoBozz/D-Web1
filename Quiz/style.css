@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.conteiner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.quiz{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(241, 241, 241);
+    height: 80vh;
+    width: 80vw;
+    border-radius: 40px;
+    box-shadow: 2px 2px 7px gray;
+}
+
+.caixa_perguntas{
+    height: 65vh;
+    width: 75vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+ul{
+    list-style: none;
+}
+
+.btn_de_resposta{
+    height: 7vh;
+    width: 50vw;
+    margin: 20px;
+    border-radius: 10px;
+    border: #fff;
+    box-shadow: 2px 2px 7px gray;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(241, 239, 239);
+    transition: 0.5s;
+}
