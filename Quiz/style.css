@@ -27,9 +27,9 @@ ul{
     list-style: none;
 }
 
-button:hover{
-    background-color: var(--branco-escuro);
+.btn_de_resposta:hover{
     transition: 0.5s;
+    transform: scale(1.05);
 }
 
 .conteiner{
@@ -60,6 +60,7 @@ button:hover{
     justify-content: center;
     align-items: center;
     flex-flow: row wrap;
+    margin-bottom: 18vh;
 }
 
 
@@ -72,19 +73,17 @@ button:hover{
     box-shadow: 2px 2px 7px var(--cinza-claro);
     background-color: var(--branco);
     cursor: pointer;
+    font-size: 16px;
 }
 
-#btn_proximo{
-    height: 5vh;
-    width: 8vw;
-    background-color: var(--branco);
-    border: var(--branco);
-    box-shadow: 2px 2px 7px var(--cinza-claro);
-    border-radius: 5px;
-    cursor: pointer;
+.correta {
+    background-color: rgb(52, 128, 52);
+    color: white;
+    transition: 0.3s;
 }
 
-#btn_proximo:hover{
-    background-color: var(--branco-escuro);
-    transition: 0.5s;
+.errada {
+    background-color: rgb(248, 135, 135);
+    color: white;
+    transition: 0.3s;
 }
