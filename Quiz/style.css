@@ -1,7 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --branco: white;
+    --preto: black;
+    --cinza-claro: gray;
+    --branco-escuro: rgb(247, 247, 247);
+    --fundo: rgb(203, 211, 204);
+}
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body{
+    font-family: "Afacad Flux";
+    color: var(--preto);
+}
+
+h1{
+    font-size: 26px;
+}
+
+ul{
+    list-style: none;
+}
+
+button:hover{
+    background-color: var(--branco-escuro);
+    transition: 0.5s;
 }
 
 .conteiner{
@@ -10,45 +38,53 @@
     justify-content: center;
     height: 100vh;
     width: 100vw;
+    background-color: var(--fundo);
 }
 
 .quiz{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    background-color: rgb(241, 241, 241);
+    background-color: var(--branco);
     height: 80vh;
     width: 80vw;
     border-radius: 40px;
-    box-shadow: 2px 2px 7px gray;
+    box-shadow: 2px 2px 7px var(--cinza-claro);
 }
 
 .caixa_perguntas{
-    height: 65vh;
+    height: 30vh;
     width: 75vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
 }
 
-ul{
-    list-style: none;
-}
 
 .btn_de_resposta{
-    height: 7vh;
-    width: 50vw;
-    margin: 20px;
+    height: 8vh;
+    width: 30vw;
+    margin: 25px;
     border-radius: 10px;
-    border: #fff;
-    box-shadow: 2px 2px 7px gray;
-    background-color: #fff;
+    border: var(--branco);
+    box-shadow: 2px 2px 7px var(--cinza-claro);
+    background-color: var(--branco);
     cursor: pointer;
 }
 
-button:hover{
-    background-color: rgb(241, 239, 239);
+#btn_proximo{
+    height: 5vh;
+    width: 8vw;
+    background-color: var(--branco);
+    border: var(--branco);
+    box-shadow: 2px 2px 7px var(--cinza-claro);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn_proximo:hover{
+    background-color: var(--branco-escuro);
     transition: 0.5s;
 }
