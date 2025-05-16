@@ -1,7 +1,7 @@
 /****************************************************************
  * Seleção dos elementos HTML
  ****************************************************************/
-// Botões
+// Botões 
 const btnBotoes = document.querySelectorAll("[btn-numero]");
 const btnOperacoes = document.querySelectorAll("[btn-operador]");
 const btnIgual = document.querySelector("[btn-igual]");
@@ -17,8 +17,8 @@ const calculadora = {
   operandoAnterior: "",
   operandoAtual: "",
   operador: "",
-  bufferTextoElemento: bufferElemento, // DIV buffer
-  displayTextoElemento: displayElemento, // DIV display
+  bufferTextoElemento: bufferElemento,
+  displayTextoElemento: displayElemento,
 };
 
 /****************************************************************
@@ -40,51 +40,83 @@ btnIgual.addEventListener("click", () => {
 });
 
 // Botões dos números
+btnBotoes.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    adicionaNumero(calculadora, btn.innerText);
+  });
+});
 
 // Botões dos operadores
+btnOperacoes.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    escolheOperador(calculadora, btn.innerText);
+  });
+});
 
 /****************************************************************
  * Regras da aplicação
  ****************************************************************/
 
-/* Atualiza o display da calculadora.
- *  A atualização consiste em atualizar os elementos HTML buffer e display
- *  O elemento buffer é atulizado com o atributo operandoAnterior
- *  O elemento display é atualizado com o atributo operandoAtual
- */
-function atualizaDisplay(calculadora) {}
+function atualizaDisplay(calc) {
+  calc.displayTextoElemento.innerText = calc.operandoAtual;
+  calc.bufferTextoElemento.innerText =
+    calc.operador && calc.operandoAnterior
+      ? `${calc.operandoAnterior} ${calc.operador}`
+      : "";
+}
 
-/* Limpa os atributos do objeto calculadora e atualiza o display.
- * Para atualizar o dispay, chame a função responsável por isso.
- */
-function limpaVariaveis(calculadora) {}
+function limpaVariaveis(calc) {
+  calc.operandoAnterior = "";
+  calc.operandoAtual = "";
+  calc.operador = "";
+  atualizaDisplay(calc);
+}
 
-/* Função chamada quando um botão de número é pressionado
- * A função recebe o objeto calculadora e o número a ser exibido no display.
- * - Adiciona um dígito no atributo operandoAtual e atualiza o display
- * O dígito "." deve receber um tratamento especial
- */
-function adicionaNumero(calculadora, numero) {}
+function adicionaNumero(calc, numero) {
+  if (numero === "." && calc.operandoAtual.includes(".")) return;
+  calc.operandoAtual += numero;
+  atualizaDisplay(calc);
+}
 
-/* Função chamada quando um botão de operador é pressionado
- * Essa função tem comportamentos diferentes dependendo do estado da calculadora.
- * Se o operandoAnterior e o operandoAtual estiverem preenchidos
- * - executar o cálculo (chamar outra função para realizar o cálculo).
- * Caso o operandoAnterior estiver vazio,
- * - armazenar o operador recebido por parâmetro no atributo operador do objeto calculadora.
- * - copiar operandoAtual para o operandoAnterior, deixando a calculadora preparada para receber o próximo número
- */
-function escolheOperador(calculadora, operador) {}
+function escolheOperador(calc, operador) {
+  if (calc.operandoAtual === "") return;
 
-/* A função recebe o objeto calculadora e executa o calculo
- * - Verificar a operação a ser executada
- * - Executar a operação
- * - Atualizar os atributos operador, operandoAnterior e operandoAtual
- * - Atualizar o display
- */
-function executaCalculo(calculadora) {}
+  if (calc.operandoAnterior !== "") {
+    executaCalculo(calc);
+  }
 
-/* Função chamada quando o botão delete for pressionado
- * Apaga o último dígito digitado no
- */
-function apagaDigito(calculadora) {}
+  calc.operador = operador;
+  calc.operandoAnterior = calc.operandoAtual;
+  calc.operandoAtual = "";
+  atualizaDisplay(calc);
+}
+
+function executaCalculo(calc) {
+  let resultado;
+  const anterior = parseFloat(calc.operandoAnterior);
+  const atual = parseFloat(calc.operandoAtual);
+
+  if (isNaN(anterior) || isNaN(atual)) return;
+
+  if (calc.operador === "+") {
+    resultado = anterior + atual;
+  } else if (calc.operador === "-") {
+    resultado = anterior - atual;
+  } else if (calc.operador === "*") {
+    resultado = anterior * atual;
+  } else if (calc.operador === "÷") {
+    resultado = atual === 0 ? "Erro" : anterior / atual;
+  } else {
+    return;
+  }
+
+  calc.operandoAtual = resultado.toString();
+  calc.operador = "";
+  calc.operandoAnterior = "";
+  atualizaDisplay(calc);
+}
+
+function apagaDigito(calc) {
+  calc.operandoAtual = calc.operandoAtual.slice(0, -1);
+  atualizaDisplay(calc);
+}
